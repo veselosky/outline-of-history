@@ -11,7 +11,7 @@ Redirect permanent / http://outline-of-history.mindvessel.net/
 #=====================================================================
 <VirtualHost *:80>
 ServerName outline-of-history.mindvessel.net
-DocumentRoot /usr/local/share/apache2/sites/outline-of-history/current/htdocs
+DocumentRoot /usr/local/share/apache2/sites/outline-of-history.mindvessel.net/current/htdocs
 DefaultType text/html
 
 SSIErrorMsg "<!-- missing include -->"
