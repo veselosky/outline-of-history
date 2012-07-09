@@ -19,7 +19,6 @@ def build():
     """Build the site"""
     target = env['otto.web.build_dir']
     with lcd(_project_dir()):
-        local('rm -rf build/*') # make clean
         local('sphinx-build -n -d build/doctrees -b html source %s/htdocs' % target)
         local('cp -a etc %s/' % target)
 
