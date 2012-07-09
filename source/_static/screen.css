@@ -1,0 +1,189 @@
+/* @import url(base-weblog.css); */
+/*
+name: The Literary Life
+designer: Carolyn Smith
+designer_url: http://not-that-ugly.co.uk
+description: Yes, those are my books. You can't see the titles, but they are all volumes of nineteenth-century poetry.
+layouts: one-column, two-column-left, two-column-right, three-column
+*/
+
+body {background:#f2f2f2 url('llbk.jpg') top left repeat-x;
+color:#554;
+font-family:'georgia', serif;
+font-size: 13px;
+line-height:1.4em;
+margin:0;
+padding:0
+}
+
+#container {width:100% !important;}
+#container-inner {width:auto;}
+
+#pagebody, #content { width:90%; max-width:1200px; margin-left:20px }
+
+
+/* styling for commonly-used html tags */
+
+a {color:#724c2a ; text-decoration:none}
+
+a:visited {color:#b73}
+
+a:hover {text-decoration:underline}
+
+blockquote, input, select, textarea {
+background:url('dateheader.png') bottom left repeat-x;
+letter-spacing:0.1em;
+padding:3px;
+border:#e1ddd3 1px solid;
+}
+input[type=text] {background:none}
+
+input, select, textarea { font:1em 'georgia', serif; }
+
+input:focus,textarea:focus {background:url('dot.gif') top right no-repeat;}
+
+ul {list-style-image:url('dot.gif'); color:#777}
+
+/* one-col stuff */
+.layout-one-column #pagebody, .layout-w #content {left:auto; margin:auto; width:60% }
+
+/* two-col stuff */
+.layout-two-column-left #alpha, .layout-tw #beta { left:auto; float:left; width:25%; }
+.layout-two-column-left #beta, .layout-tw #alpha { left:auto; float:right; width:72% }
+.layout-two-column-right #beta, .layout-wt #beta {left:auto; float:right; width:25%; }
+.layout-two-column-right #alpha, .layout-wt #alpha { float:left; width:72% }
+
+/* three-col stuff */
+.layout-three-column #pagebody, .layout-twt #content {width:95%}
+.layout-three-column #alpha, .layout-twt #beta {left:auto; float:left; width:17%; margin-right:20px}
+.layout-three-column #beta, .layout-twt #alpha {left:auto; width:62%}
+.layout-three-column #gamma, .layout-twt #gamma {left:auto; float:right; width:17%}
+
+/* header styles */
+
+#banner, #header {width:100%;
+height:180px;
+background:url('books.jpg') top left no-repeat;
+margin:0
+}
+
+#banner-header, #header-name {
+font:240% 'times new roman', serif;
+font-variant:small-caps;
+letter-spacing:0.1em;
+margin:0;
+padding:110px 20px 0px 170px;
+text-align:right
+}
+#header-name {
+padding:90px 20px 0px 170px;
+}
+
+#banner-header a, #header-inner a {
+color:#883e1b;
+text-decoration:none;
+}
+
+#banner-header a:hover, #header-inner a:hover  {
+color:#666;
+text-decoration:none;
+}
+
+#banner h2, #header-description {
+font-size:123.1%;
+font-style:italic;
+text-align:right;
+margin:15px 20px 5px 170px;
+}
+
+/* content styles */
+
+.content-nav, .date-header {
+font-size:1em;
+background:url('dateheader.png') bottom left repeat-x;
+letter-spacing:0.1em;
+font-variant:small-caps;
+border:#e1ddd3 1px solid;
+padding:5px 5px 0px 5px;
+}
+
+.entry-header, .asset-name, .section h1 {
+background:url('titlebk.png') no-repeat;
+color:#724c2a;
+font-variant:small-caps;
+font-size:138.5%;
+padding-left:20px;
+padding-bottom:2px;
+}
+a.headerlink {visibility:hidden;}
+.asset-name a { text-decoration:none; color:#724C2A; }
+
+.entry-content, .asset-content { margin:0; font-size: 1em}
+
+.entry-body, .asset-body {padding:5px}
+
+.entry-footer, .asset-footer {
+margin:10px 20px 0px 20px; 
+color:#a77332;
+background:url('underline.png') bottom right no-repeat;
+text-align:right;
+}
+
+.entry-footer a:hover, .asset-footer a:hover {text-decoration:none}
+
+/* sidebar modules */
+.module-header, .widget-header {
+font-size:1.2em;
+color:#724c2a;
+font-variant:small-caps;
+background:url('nib.png') bottom right no-repeat;
+padding-right:25px
+}
+
+.module-content, .widget-content { line-height:1.1em}
+
+.module-calendar th {font-size:0.9em; 
+font-weight:normal;
+color:#a77332;
+font-variant:small-caps;
+}
+
+.module ul li, .widget ul li {
+margin-left:12px;
+padding:0;
+list-style-image:url('dot.gif')}
+
+.module ul li ul li, .widget ul li ul li {
+font-size:90%;
+margin-left:15px;
+list-style-image:url('subcat.gif')}
+
+/* trackbacks, comments & icons */
+.trackbacks-header, .comments-header, .comments-open-header {
+padding-left:30px;
+color:#724c2a;
+font-size:1.3em
+}
+
+.trackbacks-header{background:url('trackback.gif') bottom left no-repeat;}
+
+.comments-header {background:url('comments.gif') bottom left no-repeat;}
+
+.comments-open-header {background:url('commentpost.gif') bottom left no-repeat;}
+
+.trackback, .comment-content {
+font-size:1em;
+background:url('dateheader.png') bottom left repeat-x;
+border:#e1ddd3 1px solid;
+padding:5px;
+margin-bottom:20px}
+
+#comments, #comments-open {margin-left:5px;}
+
+.comment .comment-userpic, .entry .entry-userpic  {float:right}
+
+.comment .comment-replies { margin-left: 20px; }
+
+.comment .comment-content, .entry .entry-content, .entry .entry-body {
+clear: none;
+}

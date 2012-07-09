@@ -1,0 +1,13 @@
+{#
+    globaltoc.html
+    ~~~~~~~~~~~~~~~~~~~~
+
+    Sphinx sidebar template: global table of contents.
+
+#}
+<div class="widget">
+<h3 class="widget-header"><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+    <div class="widget-content">
+        {{ toctree() }}
+    </div>
+</div>
