@@ -55,10 +55,10 @@ flying about amongst these planets, more particularly a number called the
 asteroids circling between Mars and Jupiter, and occasionally a little puff of
 more or less luminous vapour and dust would drift into the system from the
 almost limitless emptiness beyond. Such a puff is what we call a comet. 
-<i>All the rest of the space about us and
-around us and for unfathomable distances beyond is cold, lifeless, and void.</i>
-The nearest fixed star to us, <i>on this,
-minute scale</i> be it remembered–the earth as a one-inch ball, and the moon a
+*All the rest of the space about us and
+around us and for unfathomable distances beyond is cold, lifeless, and void.*
+The nearest fixed star to us, *on this,
+minute scale* be it remembered–the earth as a one-inch ball, and the moon a
 little pea–would be over 40,000 miles, away. Most of the fixed stars we see
 would still be scores and hundreds of millions of miles away.
 
