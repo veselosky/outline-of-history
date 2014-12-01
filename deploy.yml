@@ -1,0 +1,33 @@
+---
+- sudo: yes
+  hosts: webservers
+  vars:
+  - domain: outline-of-history.mindvessel.net
+  # HOST VARS MUST include: website_root website_user website_group http_service
+
+  tasks:
+  - name: install htdocs
+    copy: src=build/html/
+          dest={{ website_root }}/{{ domain }}/htdocs/
+          owner={{ website_user }}
+          group={{ website_group }}
+
+# NOTE: The "notify" will only happen on change. As a result, both the
+# install and the enable steps must notify, since one may change but the
+# other not (e.g. the vhost file may change, but the symlink may already exist)
+  - name: install vhost config
+    template: src={{ http_service }}_vhost.j2
+              dest=/etc/{{ http_service }}/sites-available/{{ domain }}.conf
+    notify:
+      - restart webserver
+
+  - name: enable the vhost config
+    file: path=/etc/{{ http_service }}/sites-enabled/{{ domain }}.conf
+          state=link
+          src=/etc/{{ http_service }}/sites-available/{{ domain }}.conf
+    notify:
+      - restart webserver
+
+  handlers:
+  - name: restart webserver
+    service: name={{ http_service }} state=restarted

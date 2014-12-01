@@ -2,19 +2,23 @@
 # Redirect alias domains to main domain
 #=====================================================================
 <VirtualHost *:80>
-ServerName www.outline-of-history.mindvessel.net
-Redirect permanent / http://outline-of-history.mindvessel.net/
+ServerName www.{{ domain }}
+Redirect permanent / http://{{ domain }}/
 </VirtualHost>
 
 #=====================================================================
-# OUTLINE-OF-HISTORY SUBDOMAIN
+# Main domain
 #=====================================================================
 <VirtualHost *:80>
-ServerName outline-of-history.mindvessel.net
-DocumentRoot /home/vince/websites/sites/outline-of-history.mindvessel.net/current/htdocs
+ServerName {{ domain }}
+DocumentRoot {{ website_root }}/{{ domain }}/htdocs
 DefaultType text/html
 
-SSIErrorMsg "<!-- missing include -->"
+<Directory {{ website_root }}/{{ domain }}/htdocs>
+    Options Includes FollowSymLinks
+    AllowOverride All
+    # Replaces Allow/Deny from earlier Apaches
+    Require all granted
+</Directory>
 
 </VirtualHost>
-
