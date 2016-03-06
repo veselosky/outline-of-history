@@ -11,10 +11,10 @@ Redirect permanent / http://{{ domain }}/
 #=====================================================================
 <VirtualHost *:80>
 ServerName {{ domain }}
-DocumentRoot {{ website_root }}/{{ domain }}/htdocs
+DocumentRoot {{ websites_home }}/{{ domain }}/htdocs
 DefaultType text/html
 
-<Directory {{ website_root }}/{{ domain }}/htdocs>
+<Directory {{ websites_home }}/{{ domain }}/htdocs>
     Options Includes FollowSymLinks
     AllowOverride All
     # Replaces Allow/Deny from earlier Apaches

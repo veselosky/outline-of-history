@@ -3,14 +3,14 @@
   hosts: webservers
   vars:
   - domain: outline-of-history.mindvessel.net
-  # HOST VARS MUST include: website_root website_user website_group http_service
+  # HOST VARS MUST include: websites_home webmaster webmaster_group http_service
 
   tasks:
   - name: install htdocs
     copy: src=build/html/
-          dest={{ website_root }}/{{ domain }}/htdocs/
-          owner={{ website_user }}
-          group={{ website_group }}
+          dest={{ websites_home }}/{{ domain }}/htdocs/
+          owner={{ webmaster }}
+          group={{ webmaster_group }}
 
 # NOTE: The "notify" will only happen on change. As a result, both the
 # install and the enable steps must notify, since one may change but the
