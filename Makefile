@@ -17,6 +17,8 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	@echo "  serve      to start a local webserver for testing"
+	@echo "  publish    to upload the files to S3"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -128,3 +130,9 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+serve:
+	cd $(BUILDDIR)/html/ && python3 -m http.server
+
+publish:
+	aws s3 cp $(BUILDDIR)/html/ s3://v001.outline-of-history.mindvessel.net/ --acl public-read --recursive
